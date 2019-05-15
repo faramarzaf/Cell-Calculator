@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp"
+    tools:context=".MainActivity"
+
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/text_field_boxes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorColor="#000000"
+                    app:hasClearButton="true"
+                    app:labelText="Initial Concentration"
+                    app:maxCharacters="3"
+
+                    app:minCharacters="1"
+                    app:panelBackgroundColor="#FFFFFF"
+                    app:primaryColor="@color/GREEN">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/txt_initialConcentration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:inputType="numberDecimal"
+                        />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/text_field_boxes2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorColor="#000000"
+                    app:hasClearButton="true"
+                    app:labelText="Final Concentration"
+                    app:maxCharacters="3"
+                    app:minCharacters="1"
+                    app:panelBackgroundColor="#FFFFFF"
+                    app:primaryColor="@color/GREEN">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/txt_finalConcentration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:inputType="numberDecimal"
+                        />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/text_field_boxes3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorColor="#000000"
+                    app:hasClearButton="true"
+                    app:labelText="Duration"
+                    app:maxCharacters="3"
+
+                    app:minCharacters="1"
+                    app:panelBackgroundColor="#FFFFFF"
+                    app:primaryColor="@color/GREEN">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/txt_duration"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:inputType="numberDecimal"
+                        />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:layout_marginLeft="@dimen/_55sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:gravity="top"
+                android:orientation="horizontal">
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/ripple1"
+                    rv_centered="true"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+
+                    >
+
+                    <Button
+                        android:id="@+id/btn_compute_doubling_time"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:background="@drawable/bg_btn_circle"
+                        android:text="Compute"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_15sdp"
+                        />
+
+
+                </com.andexert.library.RippleView>
+
+                <com.andexert.library.RippleView
+                    android:id="@+id/ripple2"
+                    rv_centered="true"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_marginTop="@dimen/_40sdp">
+
+                    <Button
+                        android:id="@+id/btn_clearAll"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_90sdp"
+                        android:background="@drawable/bg_btn_circle_clear"
+                        android:text="Clear"
+                        android:textColor="#000000"
+                        android:textSize="@dimen/_15sdp"
+
+                        />
+
+
+                </com.andexert.library.RippleView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/myresult"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FF5E2B"
+                    android:textSize="@dimen/_25sdp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
