@@ -2,6 +2,7 @@ package com.faramarz.tictacdev.cellcalculator;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -23,10 +24,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         bind();
+
+        setBackBtn();
+
         btn_compute_doubling_time.setOnClickListener(this);
         btn_clearAll.setOnClickListener(this);
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    void setBackBtn() {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
+    }
 
     void bind() {
         txt_initialConcentration = findViewById(R.id.txt_initialConcentration);
@@ -56,11 +73,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 String finall = txt_finalConcentration.getText().toString();
                 String duration = txt_duration.getText().toString();
                 final double result = doubligComputerTime.ComputeDoubling(Double.valueOf(initial), Double.valueOf(finall), Double.valueOf(duration));
-                String result2 = String.format("%.2f",result);
+                String result2 = String.format("%.2f", result);
                 myresult.setText((result2));
 
             }
-        }else if (v.getId() == btn_clearAll.getId()){
+        } else if (v.getId() == btn_clearAll.getId()) {
             myresult.setText("");
             txt_duration.setText("");
             txt_finalConcentration.setText("");

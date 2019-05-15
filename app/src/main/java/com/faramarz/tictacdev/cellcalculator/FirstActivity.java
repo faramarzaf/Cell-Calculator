@@ -30,9 +30,9 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v.getId()==btn_ic50.getId()){
-
+            startActivity(new Intent(this,Ic50Activity.class));
         }else if (v.getId()==btn_anova.getId()){
-
+            startActivity(new Intent(this,AnovaActivity.class));
         }else if(v.getId()==btn_doublingTime.getId()){
             startActivity(new Intent(this,MainActivity.class));
         }
