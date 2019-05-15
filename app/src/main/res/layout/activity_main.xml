@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:padding="@dimen/_12sdp"
     tools:context=".MainActivity"
-
+    android:background="#fff"
     >
 
     <ScrollView
@@ -77,7 +77,7 @@
                     android:layout_height="wrap_content"
                     app:errorColor="#000000"
                     app:hasClearButton="true"
-                    app:labelText="Duration"
+                    app:labelText="Duration (hour)"
                     app:maxCharacters="3"
 
                     app:minCharacters="1"
@@ -162,7 +162,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:gravity="center"
-                    android:textColor="#FF5E2B"
+                    android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/_25sdp"
                     android:textStyle="bold" />
 
