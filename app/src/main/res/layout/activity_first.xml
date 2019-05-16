@@ -19,6 +19,19 @@
         >
 
         <Button
+            android:id="@+id/btn_doublingTime"
+            style="@style/Theme.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_btns_firsts"
+            android:text="Doubling Time Calculator"
+            android:textColor="#000"
+            android:textSize="@dimen/_18sdp"
+
+            />
+
+        <Button
             android:id="@+id/btn_ic50"
             style="@style/Theme.AppCompat.Light"
             android:layout_width="match_parent"
@@ -37,19 +50,6 @@
             android:background="@drawable/bg_btns_firsts"
             android:text="ANOVA Calculator"
             android:textSize="@dimen/_18sdp" />
-
-        <Button
-            android:id="@+id/btn_doublingTime"
-            style="@style/Theme.AppCompat.Light"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/_10sdp"
-            android:background="@drawable/bg_btns_firsts"
-            android:text="Doubling Time Calculator"
-            android:textColor="#000"
-            android:textSize="@dimen/_18sdp"
-
-            />
 
 
     </LinearLayout>

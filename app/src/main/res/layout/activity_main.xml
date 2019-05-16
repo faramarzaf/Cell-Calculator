@@ -50,7 +50,7 @@
                     app:errorColor="#000000"
                     app:hasClearButton="true"
                     app:labelText="Initial Concentration"
-                    app:maxCharacters="3"
+                    app:maxCharacters="5"
 
                     app:minCharacters="1"
                     app:panelBackgroundColor="#FFFFFF"
@@ -74,7 +74,7 @@
                     app:errorColor="#000000"
                     app:hasClearButton="true"
                     app:labelText="Final Concentration"
-                    app:maxCharacters="3"
+                    app:maxCharacters="5"
                     app:minCharacters="1"
                     app:panelBackgroundColor="#FFFFFF"
                     app:primaryColor="@color/GREEN">
@@ -97,7 +97,7 @@
                     app:errorColor="#000000"
                     app:hasClearButton="true"
                     app:labelText="Duration (hour)"
-                    app:maxCharacters="3"
+                    app:maxCharacters="5"
 
                     app:minCharacters="1"
                     app:panelBackgroundColor="#FFFFFF"
