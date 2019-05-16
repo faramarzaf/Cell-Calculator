@@ -140,7 +140,8 @@
                         android:background="@drawable/bg_btn_circle"
                         android:text="Compute"
                         android:textColor="#000000"
-                        android:textSize="@dimen/_15sdp"
+                        android:textSize="@dimen/_18sdp"
+                        style="@style/Theme.AppCompat.Light"
                         />
 
 
@@ -160,8 +161,8 @@
                         android:background="@drawable/bg_btn_circle_clear"
                         android:text="Clear"
                         android:textColor="#000000"
-                        android:textSize="@dimen/_15sdp"
-
+                        android:textSize="@dimen/_18sdp"
+                        style="@style/Theme.AppCompat.Light"
                         />
 
 
@@ -232,19 +233,40 @@
 
                 </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
 
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                >
+
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/_120sdp"
                     android:layout_height="wrap_content"
                     android:id="@+id/saveCell"
-                    android:text="save cell"
+                    android:text="Save Cell"
+                    android:background="@drawable/bg_btns_firsts"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    style="@style/Theme.AppCompat.Light"
                     />
 
                 <Button
-                    android:layout_width="match_parent"
+                    android:layout_width="@dimen/_120sdp"
                     android:layout_height="wrap_content"
                     android:id="@+id/showHistory"
-                    android:text="show history"
+                    android:text="Show History"
+                    android:background="@drawable/bg_btns_firsts"
+                    android:textColor="#000"
+                    android:textSize="@dimen/_18sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    style="@style/Theme.AppCompat.Light"
                     />
+
 
             </LinearLayout>
 
