@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -33,7 +34,7 @@ public class ListActivity extends AppCompatActivity {
         listview = findViewById(R.id.list);
         dbHandler = new DBHandler(this);
         generateList();
-
+        setBackBtn();
 
         listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -71,6 +72,21 @@ public class ListActivity extends AppCompatActivity {
         listview.setAdapter(adapter);
         listview.deferNotifyDataSetChanged();
         dbHandler.close();
+    }
+
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == android.R.id.home)
+            finish();
+        return super.onOptionsItemSelected(item);
+    }
+
+    void setBackBtn() {
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        }
     }
 
 }
