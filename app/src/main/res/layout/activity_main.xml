@@ -24,6 +24,25 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/dayDevice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+
+                    />
+                <TextView
+                    android:id="@+id/day_week"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold"
+
+                    />
+
                 <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
                     android:id="@+id/text_field_boxes"
                     android:layout_width="match_parent"
@@ -165,6 +184,67 @@
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="@dimen/_25sdp"
                     android:textStyle="bold" />
+
+
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/text_field_boxes4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorColor="#000000"
+                    app:hasClearButton="true"
+                    app:labelText="Title"
+                    app:maxCharacters="15"
+                    app:minCharacters="2"
+                    app:panelBackgroundColor="#FFFFFF"
+                    app:primaryColor="@color/GREEN">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/txt_cell_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:inputType="text"
+                        />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+
+                <studio.carbonylgroup.textfieldboxes.TextFieldBoxes
+                    android:id="@+id/text_field_boxes5"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:errorColor="#000000"
+                    app:hasClearButton="true"
+                    app:labelText="Description"
+                    app:maxCharacters="25"
+                    app:minCharacters="2"
+                    app:panelBackgroundColor="#FFFFFF"
+                    app:primaryColor="@color/GREEN">
+
+                    <studio.carbonylgroup.textfieldboxes.ExtendedEditText
+                        android:id="@+id/txt_cell_description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/_15sdp"
+                        android:inputType="text"
+                        />
+
+                </studio.carbonylgroup.textfieldboxes.TextFieldBoxes>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/saveCell"
+                    android:text="save cell"
+                    />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/showHistory"
+                    android:text="show history"
+                    />
 
             </LinearLayout>
 
