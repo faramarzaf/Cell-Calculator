@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     TextView myresult, dayDevice, day_week;
 
 
-    Boolean backpressed = false;
+
     String todaysPostDate;
     DBHandler dbHandler;
 
@@ -185,20 +185,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    @Override
-    public void onBackPressed() {
-        if (backpressed) {
-            finish();
-        } else
-            Toast.makeText(this, "Press again for exit", Toast.LENGTH_SHORT).show();
-        backpressed = true;
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                backpressed = false;
-            }
-        }, 2000);
-    }
+
 
 }
 

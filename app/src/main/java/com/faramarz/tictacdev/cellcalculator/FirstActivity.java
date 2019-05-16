@@ -1,15 +1,16 @@
 package com.faramarz.tictacdev.cellcalculator;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-
+import android.widget.Toast;
 
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
-
+    Boolean backpressed = false;
     Button btn_ic50, btn_anova, btn_doublingTime;
 
     @Override
@@ -44,6 +45,19 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
         }
     }
 
-
+    @Override
+    public void onBackPressed() {
+        if (backpressed) {
+            finish();
+        } else
+            Toast.makeText(this, "Press again for exit", Toast.LENGTH_SHORT).show();
+        backpressed = true;
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                backpressed = false;
+            }
+        }, 2000);
+    }
 
 }
