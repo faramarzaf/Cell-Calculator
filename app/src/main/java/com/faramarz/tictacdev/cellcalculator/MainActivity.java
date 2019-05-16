@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity {
                 HistoryModel historyModel = new HistoryModel();
                 historyModel.setDescription((txt_cell_description.getText().toString()));
                 historyModel.setTitle((txt_cell_title.getText()).toString());
+                historyModel.setDoublingtime("DT : "+myresult.getText().toString());
                 historyModel.setDate(todaysPostDate);
                 dbHandler.addHistory(historyModel);
                 dbHandler.close();

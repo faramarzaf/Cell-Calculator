@@ -3,9 +3,18 @@ package com.faramarz.tictacdev.cellcalculator.Utils;
 public class HistoryModel {
 
     private int id;
-    private String description,title, date;
+    private String description,title, date,doublingtime;
 
     public HistoryModel() {
+    }
+
+
+    public String getDoublingtime() {
+        return doublingtime;
+    }
+
+    public void setDoublingtime(String doublingtime) {
+        this.doublingtime = doublingtime;
     }
 
     public int getId() {

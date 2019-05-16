@@ -43,10 +43,13 @@ public class ListAdapter extends BaseAdapter {
         TextView descr = convertView.findViewById(R.id.historyDescription);
         TextView title = convertView.findViewById(R.id.historyTitle);
         TextView date = convertView.findViewById(R.id.historyDate);
+        TextView historyDoublingTime = convertView.findViewById(R.id.historyDoublingTime);
 
         descr.setText(historyModels.get(position).getDescription());
         title.setText(historyModels.get(position).getTitle());
         date.setText(historyModels.get(position).getDate());
+        historyDoublingTime.setText(historyModels.get(position).getDoublingtime());
+
         return convertView;
 
     }

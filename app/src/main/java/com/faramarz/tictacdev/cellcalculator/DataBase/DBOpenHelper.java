@@ -7,9 +7,10 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBOpenHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "history.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;
     public static final String TABLE_HISTORY = "history";
     public static final String HISTORY_ID = "id";
+    public static final String HISTORY_DOUBLING_TIME = "doublingtime";
     public static final String HISTORY_DESCRIPTION = "description";
     public static final String HISTORY_DATE = "date";
     public static final String HISTORY_TITLE = "title";
@@ -19,6 +20,7 @@ public class DBOpenHelper extends SQLiteOpenHelper {
                     " (" + HISTORY_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
                     " " + HISTORY_DESCRIPTION + " TEXT, " +
                     " " + HISTORY_TITLE + " TEXT, " +
+                    " " + HISTORY_DOUBLING_TIME + " TEXT, " +
                     " " + HISTORY_DATE + " TEXT)";
 
 

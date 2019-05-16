@@ -15,7 +15,7 @@ public class DBHandler {
 
     private SQLiteOpenHelper sqLiteOpenHelper;
     private SQLiteDatabase database;
-    String[] historyColumns = {DBOpenHelper.HISTORY_ID, DBOpenHelper.HISTORY_DESCRIPTION, DBOpenHelper.HISTORY_TITLE, DBOpenHelper.HISTORY_DATE};
+    String[] historyColumns = {DBOpenHelper.HISTORY_ID, DBOpenHelper.HISTORY_DESCRIPTION, DBOpenHelper.HISTORY_TITLE, DBOpenHelper.HISTORY_DATE,DBOpenHelper.HISTORY_DOUBLING_TIME};
 
 
     public DBHandler(Context context) {
@@ -28,6 +28,7 @@ public class DBHandler {
         contentValues.put(DBOpenHelper.HISTORY_DESCRIPTION, historyModel.getDescription());
         contentValues.put(DBOpenHelper.HISTORY_DATE, historyModel.getDate());
         contentValues.put(DBOpenHelper.HISTORY_TITLE, historyModel.getTitle());
+        contentValues.put(DBOpenHelper.HISTORY_DOUBLING_TIME, historyModel.getDoublingtime());
         database.insert(DBOpenHelper.TABLE_HISTORY, null, contentValues);
     }
 
@@ -51,6 +52,7 @@ public class DBHandler {
                 historyModel.setDescription(cursor.getString(cursor.getColumnIndex(DBOpenHelper.HISTORY_DESCRIPTION)));
                 historyModel.setDate(cursor.getString(cursor.getColumnIndex(DBOpenHelper.HISTORY_DATE)));
                 historyModel.setTitle(cursor.getString(cursor.getColumnIndex(DBOpenHelper.HISTORY_TITLE)));
+                historyModel.setDoublingtime(cursor.getString(cursor.getColumnIndex(DBOpenHelper.HISTORY_DOUBLING_TIME)));
                 historyModels.add(historyModel);
             } while (cursor.moveToNext());
         }
