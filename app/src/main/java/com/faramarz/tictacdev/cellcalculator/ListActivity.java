@@ -3,12 +3,15 @@ package com.faramarz.tictacdev.cellcalculator;
 import android.content.DialogInterface;
 
 import android.os.Bundle;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.util.List;
 import java.util.Locale;
 import com.faramarz.tictacdev.cellcalculator.DataBase.DBHandler;
