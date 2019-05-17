@@ -6,7 +6,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="@dimen/_12sdp"
-    tools:context=".FirstActivity">
+    tools:context=".FirstActivity"
+    android:background="@drawable/bgfirst"
+    >
 
 
     <LinearLayout
@@ -26,8 +28,8 @@
             android:layout_margin="@dimen/_10sdp"
             android:background="@drawable/bg_btns_firsts"
             android:text="Doubling Time Calculator"
-            android:textColor="#000"
-            android:textSize="@dimen/_18sdp"
+            android:textColor="#C73E13"
+            android:textSize="@dimen/_19sdp"
 
             />
 
@@ -39,7 +41,9 @@
             android:layout_margin="@dimen/_10sdp"
             android:background="@drawable/bg_btns_firsts"
             android:text="IC50 Calculator"
-            android:textSize="@dimen/_18sdp" />
+            android:textSize="@dimen/_19sdp"
+            android:textColor="#C73E13"
+            />
 
         <Button
             android:id="@+id/btn_anova"
@@ -49,7 +53,9 @@
             android:layout_margin="@dimen/_10sdp"
             android:background="@drawable/bg_btns_firsts"
             android:text="ANOVA Calculator"
-            android:textSize="@dimen/_18sdp" />
+            android:textSize="@dimen/_19sdp"
+            android:textColor="#C73E13"
+            />
 
 
     </LinearLayout>

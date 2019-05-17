@@ -7,9 +7,8 @@
     android:orientation="vertical"
     android:padding="@dimen/_12sdp"
     tools:context=".MainActivity"
-    android:background="#fff"
+    android:background="#FFFFFF"
     >
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -22,7 +21,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                >
 
                 <TextView
                     android:id="@+id/dayDevice"
@@ -53,7 +53,7 @@
                     app:maxCharacters="5"
 
                     app:minCharacters="1"
-                    app:panelBackgroundColor="#FFFFFF"
+                    app:panelBackgroundColor="#6FEEEEEE"
                     app:primaryColor="@color/GREEN">
 
                     <studio.carbonylgroup.textfieldboxes.ExtendedEditText
@@ -76,7 +76,7 @@
                     app:labelText="Final Concentration"
                     app:maxCharacters="5"
                     app:minCharacters="1"
-                    app:panelBackgroundColor="#FFFFFF"
+                    app:panelBackgroundColor="#6FEEEEEE"
                     app:primaryColor="@color/GREEN">
 
                     <studio.carbonylgroup.textfieldboxes.ExtendedEditText
@@ -100,7 +100,7 @@
                     app:maxCharacters="5"
 
                     app:minCharacters="1"
-                    app:panelBackgroundColor="#FFFFFF"
+                    app:panelBackgroundColor="#6FEEEEEE"
                     app:primaryColor="@color/GREEN">
 
                     <studio.carbonylgroup.textfieldboxes.ExtendedEditText
@@ -197,7 +197,7 @@
                     app:labelText="Title"
                     app:maxCharacters="15"
                     app:minCharacters="2"
-                    app:panelBackgroundColor="#FFFFFF"
+                    app:panelBackgroundColor="#6FEEEEEE"
                     app:primaryColor="@color/GREEN">
 
                     <studio.carbonylgroup.textfieldboxes.ExtendedEditText
@@ -220,7 +220,7 @@
                     app:labelText="Description"
                     app:maxCharacters="25"
                     app:minCharacters="2"
-                    app:panelBackgroundColor="#FFFFFF"
+                    app:panelBackgroundColor="#6FEEEEEE"
                     app:primaryColor="@color/GREEN">
 
                     <studio.carbonylgroup.textfieldboxes.ExtendedEditText
@@ -244,25 +244,25 @@
                 >
 
                 <Button
-                    android:layout_width="@dimen/_120sdp"
+                    android:layout_width="@dimen/_130sdp"
                     android:layout_height="wrap_content"
                     android:id="@+id/saveCell"
                     android:text="Save Cell"
                     android:background="@drawable/bg_btns_firsts"
-                    android:textColor="#000"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_19sdp"
+                    android:textColor="#C73E13"
                     android:layout_margin="@dimen/_10sdp"
                     style="@style/Theme.AppCompat.Light"
                     />
 
                 <Button
-                    android:layout_width="@dimen/_120sdp"
+                    android:layout_width="@dimen/_130sdp"
                     android:layout_height="wrap_content"
                     android:id="@+id/showHistory"
                     android:text="Show History"
                     android:background="@drawable/bg_btns_firsts"
-                    android:textColor="#000"
-                    android:textSize="@dimen/_18sdp"
+                    android:textSize="@dimen/_19sdp"
+                    android:textColor="#C73E13"
                     android:layout_margin="@dimen/_10sdp"
                     style="@style/Theme.AppCompat.Light"
                     />

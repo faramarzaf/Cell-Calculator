@@ -6,14 +6,16 @@ import android.os.Handler;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.appcompat.app.AppCompatActivity;
+
 
 
 public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
     Boolean backpressed = false;
     Button btn_ic50, btn_anova, btn_doublingTime;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +37,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
 
     }
+
 
     @Override
     public void onClick(View v) {

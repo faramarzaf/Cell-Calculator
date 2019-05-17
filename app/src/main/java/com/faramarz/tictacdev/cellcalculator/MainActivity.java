@@ -21,6 +21,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import es.dmoral.toasty.Toasty;
 import studio.carbonylgroup.textfieldboxes.ExtendedEditText;
 
 
@@ -31,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 
     DoublingComputerTime doubligComputerTime = new DoublingComputerTime();
     TextView myresult, dayDevice, day_week;
-
 
 
     String todaysPostDate;
@@ -94,11 +94,14 @@ public class MainActivity extends AppCompatActivity {
                 } else if (txt_cell_description.getText().toString().isEmpty()) {
                     return;
                 } else if (!txt_cell_title.getText().toString().isEmpty() & !txt_cell_description.getText().toString().isEmpty())
-                    dbHandler.open();
+
+
+                    Toasty.success(MainActivity.this, "Saved!", Toast.LENGTH_SHORT, true).show();
+                dbHandler.open();
                 HistoryModel historyModel = new HistoryModel();
                 historyModel.setDescription((txt_cell_description.getText().toString()));
                 historyModel.setTitle((txt_cell_title.getText()).toString());
-                historyModel.setDoublingtime("DT : "+myresult.getText().toString());
+                historyModel.setDoublingtime("DT : " + myresult.getText().toString());
                 historyModel.setDate(todaysPostDate);
                 dbHandler.addHistory(historyModel);
                 dbHandler.close();
@@ -185,8 +188,6 @@ public class MainActivity extends AppCompatActivity {
         dayDevice = findViewById(R.id.dayDevice);
         day_week = findViewById(R.id.day_week);
     }
-
-
 
 
 }
