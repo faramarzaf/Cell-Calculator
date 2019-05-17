@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -28,7 +29,7 @@ import studio.carbonylgroup.textfieldboxes.ExtendedEditText;
 public class MainActivity extends AppCompatActivity {
 
     ExtendedEditText txt_initialConcentration, txt_finalConcentration, txt_duration, txt_cell_description, txt_cell_title;
-    Button btn_compute_doubling_time, btn_clearAll, showHistory, saveCell;
+    Button btn_compute_doubling_time, btn_clearAll, saveCell;
 
     DoublingComputerTime doubligComputerTime = new DoublingComputerTime();
     TextView myresult, dayDevice, day_week;
@@ -91,10 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (txt_cell_title.getText().toString().isEmpty()) {
                     return;
-                } else if (txt_cell_description.getText().toString().isEmpty()) {
-                    return;
-                } else if (!txt_cell_title.getText().toString().isEmpty() & !txt_cell_description.getText().toString().isEmpty())
-
+                }  else if (!txt_cell_title.getText().toString().isEmpty())
 
                     Toasty.success(MainActivity.this, "Saved!", Toast.LENGTH_SHORT, true).show();
                 dbHandler.open();
@@ -107,12 +105,7 @@ public class MainActivity extends AppCompatActivity {
                 dbHandler.close();
             }
         });
-        showHistory.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                MainActivity.this.startActivity(new Intent(MainActivity.this, ListActivity.class));
-            }
-        });
+
 
         btn_clearAll.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -124,6 +117,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
 
     @Override
     protected void onPause() {
@@ -161,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
         int id = item.getItemId();
         if (id == android.R.id.home)
             finish();
+        else if (item.getItemId() == R.id.history) {
+            startActivity(new Intent(MainActivity.this, ListActivity.class));
+        }
         return super.onOptionsItemSelected(item);
     }
 
@@ -182,7 +186,7 @@ public class MainActivity extends AppCompatActivity {
 
         myresult = findViewById(R.id.myresult);
 
-        showHistory = findViewById(R.id.showHistory);
+
         saveCell = findViewById(R.id.saveCell);
 
         dayDevice = findViewById(R.id.dayDevice);
