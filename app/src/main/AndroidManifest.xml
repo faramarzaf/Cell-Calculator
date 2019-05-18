@@ -13,29 +13,40 @@
         tools:ignore="GoogleAppIndexingWarning">
         <activity
             android:name=".AboutUsActivity"
-            android:theme="@style/AboutusTheme">
+            android:theme="@style/AboutusTheme"
+            android:screenOrientation="portrait"
+
+            >
 
         </activity>
 
         <activity
             android:name=".ListActivity"
-            android:label="Cells History">
+            android:label="Cells History"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
 
         <activity
             android:name=".Ic50Activity"
-            android:label="IC50 Calculator">
+            android:label="IC50 Calculator"
+            android:screenOrientation="portrait"
+            >
 
         </activity>
 
         <activity
             android:name=".AnovaActivity"
-            android:label="ANOVA Calculator" />
+            android:label="ANOVA Calculator"
+            android:screenOrientation="portrait"
+            />
 
         <activity
             android:name=".FirstActivity"
-            android:label="@string/app_name">
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -45,7 +56,9 @@
 
         <activity
             android:name=".MainActivity"
-            android:label="Doubling Time Calculator" />
+            android:label="Doubling Time Calculator"
+            android:screenOrientation="portrait"
+            />
 
 
     </application>
