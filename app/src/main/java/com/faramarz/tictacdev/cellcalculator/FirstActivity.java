@@ -4,6 +4,8 @@ import android.content.Intent;
 import android.os.Handler;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -38,6 +40,19 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_about, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+      if (item.getItemId() == R.id.aboutus) {
+            startActivity(new Intent(FirstActivity.this, AboutUsActivity.class));
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
     @Override
     public void onClick(View v) {

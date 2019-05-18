@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">Cell Calculator</string>
+
+
+    <string name="content">
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet,
+    </string>
+
+
+
 </resources>
