@@ -11,23 +11,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-
-        <activity android:name=".ListActivity"
-            android:label="Cells History">
-
-        </activity>
-
+        <activity android:name=".AboutUsActivity"></activity>
+        <activity
+            android:name=".ListActivity"
+            android:label="Cells History"></activity>
         <activity
             android:name=".Ic50Activity"
-            android:label="IC50 Calculator">
-
-        </activity>
-
+            android:label="IC50 Calculator"></activity>
         <activity
             android:name=".AnovaActivity"
             android:label="ANOVA Calculator" />
         <activity
-
             android:name=".FirstActivity"
             android:label="@string/app_name">
             <intent-filter>
@@ -36,13 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".MainActivity"
             android:label="Doubling Time Calculator" />
-
-
-
     </application>
 
 </manifest>
