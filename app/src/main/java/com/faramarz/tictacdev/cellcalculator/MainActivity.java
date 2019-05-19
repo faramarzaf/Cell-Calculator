@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                 } else if (txt_cell_title.getText().toString().isEmpty()) {
                     return;
-                }  else if (!txt_cell_title.getText().toString().isEmpty())
+                } else if (!txt_cell_title.getText().toString().isEmpty())
 
                     Toasty.success(MainActivity.this, "Saved!", Toast.LENGTH_SHORT, true).show();
                 dbHandler.open();
@@ -123,7 +123,6 @@ public class MainActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return super.onCreateOptionsMenu(menu);
     }
-
 
 
     @Override

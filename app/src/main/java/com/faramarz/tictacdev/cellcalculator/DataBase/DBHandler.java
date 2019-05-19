@@ -15,7 +15,7 @@ public class DBHandler {
 
     private SQLiteOpenHelper sqLiteOpenHelper;
     private SQLiteDatabase database;
-    String[] historyColumns = {DBOpenHelper.HISTORY_ID, DBOpenHelper.HISTORY_DESCRIPTION, DBOpenHelper.HISTORY_TITLE, DBOpenHelper.HISTORY_DATE,DBOpenHelper.HISTORY_DOUBLING_TIME};
+    String[] historyColumns = {DBOpenHelper.HISTORY_ID, DBOpenHelper.HISTORY_DESCRIPTION, DBOpenHelper.HISTORY_TITLE, DBOpenHelper.HISTORY_DATE, DBOpenHelper.HISTORY_DOUBLING_TIME};
 
 
     public DBHandler(Context context) {
@@ -33,12 +33,9 @@ public class DBHandler {
     }
 
 
-
     public void deleteItem(int id) {
         database.delete(DBOpenHelper.TABLE_HISTORY, DBOpenHelper.HISTORY_ID + " = " + id, null);
     }
-
-
 
 
     public List<HistoryModel> getAllDiary() {
@@ -69,6 +66,11 @@ public class DBHandler {
     }
 
 
-
+    public void deleteAll() {
+        database = sqLiteOpenHelper.getWritableDatabase();
+        database.delete(DBOpenHelper.TABLE_HISTORY, null, null);
+        database.execSQL("delete from " + DBOpenHelper.TABLE_HISTORY);
+        database.close();
+    }
 
 }

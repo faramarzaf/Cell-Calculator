@@ -2,6 +2,7 @@ package com.faramarz.tictacdev.cellcalculator;
 
 import android.content.DialogInterface;
 
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import android.view.Menu;
@@ -17,6 +18,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.util.List;
 
 import com.faramarz.tictacdev.cellcalculator.DataBase.DBHandler;
+import com.faramarz.tictacdev.cellcalculator.DataBase.DBOpenHelper;
 import com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel;
 import com.faramarz.tictacdev.cellcalculator.Utils.ListAdapter;
 
@@ -37,6 +39,7 @@ public class ListActivity extends AppCompatActivity {
         dbHandler = new DBHandler(this);
         generateList();
         setBackBtn();
+
 
         listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -98,21 +101,18 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 clearData();
-                Toasty.success(getApplicationContext(),"All cells removed!",Toasty.LENGTH_SHORT).show();
+                generateList();
+                Toasty.success(getApplicationContext(), "All cells removed!", Toasty.LENGTH_SHORT).show();
+
             }
         }).setNeutralButton("Cancel", null).show();
     }
 
-    void clearData(){
-        dbHandler.open();
-        List<HistoryModel> historyModels = dbHandler.getAllDiary();
-        adapter = new ListAdapter(this, historyModels);
-        historyModels.clear();
-        listview.setAdapter(adapter);
-        listview.deferNotifyDataSetChanged();
-        dbHandler.close();
-
+    void clearData() {
+        DBHandler dbHandler = new DBHandler(getApplicationContext());
+        dbHandler.deleteAll();
     }
+
 
     void setBackBtn() {
         if (getSupportActionBar() != null) {
