@@ -4,24 +4,23 @@ import android.content.DialogInterface;
 
 import android.os.Bundle;
 
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.List;
-import java.util.Locale;
+
 import com.faramarz.tictacdev.cellcalculator.DataBase.DBHandler;
 import com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel;
 import com.faramarz.tictacdev.cellcalculator.Utils.ListAdapter;
 
-
-
-
-
+import es.dmoral.toasty.Toasty;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -43,17 +42,16 @@ public class ListActivity extends AppCompatActivity {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
 
-                        showAlertDialog("Delete this cell ?", "YES", "CANCEL", adapterView, i);
-
-
+                showAlertDialog("Delete this cell ?", "YES", "CANCEL", adapterView, i);
 
                 return false;
             }
         });
 
-        //findViewById(R.id.settingActivity).setOnClickListener(v -> {startActivity(new Intent(this, SettingActivity.class));});
+
     }
-    public void showAlertDialog(String title, String yes, String cancel, final AdapterView<?> adapterView, final int i){
+
+    public void showAlertDialog(String title, String yes, String cancel, final AdapterView<?> adapterView, final int i) {
         new AlertDialog.Builder(ListActivity.this).setTitle(title)
                 .setPositiveButton(yes, new DialogInterface.OnClickListener() {
                     @Override
@@ -70,7 +68,7 @@ public class ListActivity extends AppCompatActivity {
 
     public void generateList() {
         dbHandler.open();
-       List<HistoryModel> historyModels = dbHandler.getAllDiary();
+        List<HistoryModel> historyModels = dbHandler.getAllDiary();
         adapter = new ListAdapter(this, historyModels);
         listview.setAdapter(adapter);
         listview.deferNotifyDataSetChanged();
@@ -79,11 +77,41 @@ public class ListActivity extends AppCompatActivity {
 
 
     @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.delete_all_menu, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+    @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home)
             finish();
+        else if (id == R.id.deleteAll) {
+            showDeleteAllDialog();
+        }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void showDeleteAllDialog() {
+        new AlertDialog.Builder(ListActivity.this).setTitle("Delete All History?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                clearData();
+                Toasty.success(getApplicationContext(),"All cells removed!",Toasty.LENGTH_SHORT).show();
+            }
+        }).setNeutralButton("Cancel", null).show();
+    }
+
+    void clearData(){
+        dbHandler.open();
+        List<HistoryModel> historyModels = dbHandler.getAllDiary();
+        adapter = new ListAdapter(this, historyModels);
+        historyModels.clear();
+        listview.setAdapter(adapter);
+        listview.deferNotifyDataSetChanged();
+        dbHandler.close();
+
     }
 
     void setBackBtn() {

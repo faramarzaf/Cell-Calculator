@@ -4,13 +4,11 @@
 
     >
 
-
-
-
-    <item android:title="About Us"
-        android:id="@+id/aboutus"
-
+    <item android:title="Delete All"
+        android:id="@+id/deleteAll"
+        app:showAsAction="always"
         />
+
 
 
 </menu>
