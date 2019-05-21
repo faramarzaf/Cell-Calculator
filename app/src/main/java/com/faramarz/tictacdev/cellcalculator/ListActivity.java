@@ -103,7 +103,6 @@ public class ListActivity extends AppCompatActivity {
                 clearData();
                 generateList();
                 Toasty.success(getApplicationContext(), "All cells removed!", Toasty.LENGTH_SHORT).show();
-
             }
         }).setNeutralButton("Cancel", null).show();
     }
