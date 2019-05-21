@@ -54,6 +54,8 @@ public class ListActivity extends AppCompatActivity {
 
     }
 
+
+
     public void showAlertDialog(String title, String yes, String cancel, final AdapterView<?> adapterView, final int i) {
         new AlertDialog.Builder(ListActivity.this).setTitle(title)
                 .setPositiveButton(yes, new DialogInterface.OnClickListener() {
@@ -91,6 +93,9 @@ public class ListActivity extends AppCompatActivity {
         if (id == android.R.id.home)
             finish();
         else if (id == R.id.deleteAll) {
+            if (listview.getAdapter().getCount()==0){
+                Toasty.info(getApplicationContext(),"There is no record !",Toasty.LENGTH_SHORT).show();
+            }else
             showDeleteAllDialog();
         }
         return super.onOptionsItemSelected(item);
@@ -102,7 +107,7 @@ public class ListActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialog, int which) {
                 clearData();
                 generateList();
-                Toasty.success(getApplicationContext(), "All cells removed!", Toasty.LENGTH_SHORT).show();
+                Toasty.success(getApplicationContext(), "All cells removed !", Toasty.LENGTH_SHORT).show();
             }
         }).setNeutralButton("Cancel", null).show();
     }
