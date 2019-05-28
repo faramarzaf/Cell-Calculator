@@ -11,12 +11,48 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".MVP.View.Ic50Activity"></activity>
-        <activity android:name=".MVP.View.FirstMvpActivity" />
-        <activity android:name=".MVP.View.AnovaMvpActivity" />
-        <activity android:name=".MVP.View.ListMvpActivity" />
-        <activity android:name=".MVP.View.AboutUsMvpActivity" />
-        <activity android:name=".MVP.View.MainMvpActivity" />
+
+
+        <activity android:name=".MVP.Ic50MvpActivity"
+            android:label="IC50 Calculator"
+            android:screenOrientation="portrait"
+            />
+
+
+        <activity android:name=".MVP.FirstMvpActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+           >
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".MVP.AnovaMvpActivity"
+            android:label="ANOVA Calculator"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".MVP.ListMvpActivity"
+            android:label="Cells History"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".MVP.AboutUsMvpActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AboutusTheme"
+            />
+
+        <activity android:name=".MVP.MainMvpActivity"
+            android:label="Doubling Time Calculator"
+            android:screenOrientation="portrait"
+            />
+
+
         <activity
             android:name=".AboutUsActivity"
             android:screenOrientation="portrait"
@@ -37,12 +73,11 @@
             android:name=".FirstActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+
         </activity>
+
         <activity
             android:name=".MainActivity"
             android:label="Doubling Time Calculator"

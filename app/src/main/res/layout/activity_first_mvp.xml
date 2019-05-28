@@ -1,9 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MVP.View.FirstMvpActivity">
+    android:orientation="vertical"
+    android:padding="@dimen/_12sdp"
+    tools:context=".FirstActivity"
+    android:background="@drawable/bgfirst"
+    >
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical"
+
+        >
+
+        <Button
+            android:id="@+id/btn_doublingTime"
+            style="@style/Theme.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_btns_firsts"
+            android:text="Doubling Time Calculator"
+            android:textColor="#C73E13"
+            android:textSize="@dimen/_19sdp"
+
+            />
+
+        <Button
+            android:id="@+id/btn_ic50"
+            style="@style/Theme.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_btns_firsts"
+            android:text="IC50 Calculator"
+            android:textSize="@dimen/_19sdp"
+            android:textColor="#C73E13"
+            />
+
+        <Button
+            android:id="@+id/btn_anova"
+            style="@style/Theme.AppCompat.Light"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:background="@drawable/bg_btns_firsts"
+            android:text="ANOVA Calculator"
+            android:textSize="@dimen/_19sdp"
+            android:textColor="#C73E13"
+            />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

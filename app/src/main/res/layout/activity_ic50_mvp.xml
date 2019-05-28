@@ -4,19 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    tools:context=".Ic50Activity"
     android:orientation="vertical"
-    android:gravity="center"
-    tools:context=".ListActivity"
-    android:background="#85673AB7"
     >
 
 
-    <ListView
-        android:id="@+id/list"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
-    </ListView>
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_fileName="comingsoon.json"
+        app:lottie_loop="true"
+        app:lottie_autoPlay="true"
+        />
+
 
 
 </LinearLayout>
