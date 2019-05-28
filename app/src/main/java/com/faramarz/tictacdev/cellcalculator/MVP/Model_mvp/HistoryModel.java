@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.MVP;
+package com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp;
 
 public class HistoryModel {
 
