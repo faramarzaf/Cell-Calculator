@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.MVP;
+package com.faramarz.tictacdev.cellcalculator.MVP.View_mvp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,12 +7,12 @@ import android.view.MenuItem;
 
 import com.faramarz.tictacdev.cellcalculator.R;
 
-public class Ic50MvpActivity extends AppCompatActivity {
+public class AnovaMvpActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ic50_mvp);
+        setContentView(R.layout.activity_anova_mvp);
         setBackBtn();
 
     }

@@ -1,31 +1,26 @@
-package com.faramarz.tictacdev.cellcalculator;
+package com.faramarz.tictacdev.cellcalculator.MVP.View_mvp;
+
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
-
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
-import androidx.appcompat.app.AppCompatActivity;
+import com.faramarz.tictacdev.cellcalculator.Normal.DBHandler;
+import com.faramarz.tictacdev.cellcalculator.R;
+import com.faramarz.tictacdev.cellcalculator.Normal.HistoryModel;
+import com.faramarz.tictacdev.cellcalculator.Normal.ListAdapter;
 
 import java.util.List;
 
-import com.faramarz.tictacdev.cellcalculator.DataBase.DBHandler;
-import com.faramarz.tictacdev.cellcalculator.DataBase.DBOpenHelper;
-import com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel;
-import com.faramarz.tictacdev.cellcalculator.Utils.ListAdapter;
-
 import es.dmoral.toasty.Toasty;
 
-public class ListActivity extends AppCompatActivity {
-
+public class ListMvpActivity extends AppCompatActivity {
 
     ListView listview;
     DBHandler dbHandler;
@@ -34,12 +29,12 @@ public class ListActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list);
+        setContentView(R.layout.activity_list_mvp);
+
         listview = findViewById(R.id.list);
         dbHandler = new DBHandler(this);
         generateList();
         setBackBtn();
-
 
         listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -52,12 +47,11 @@ public class ListActivity extends AppCompatActivity {
         });
 
 
+
     }
 
-
-
     public void showAlertDialog(String title, String yes, String cancel, final AdapterView<?> adapterView, final int i) {
-        new AlertDialog.Builder(ListActivity.this).setTitle(title)
+        new AlertDialog.Builder(ListMvpActivity.this).setTitle(title)
                 .setPositiveButton(yes, new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialogInterface, int pos) {
@@ -69,7 +63,6 @@ public class ListActivity extends AppCompatActivity {
                     }
                 }).setNeutralButton(cancel, null).show();
     }
-
 
     public void generateList() {
         dbHandler.open();
@@ -96,13 +89,14 @@ public class ListActivity extends AppCompatActivity {
             if (listview.getAdapter().getCount()==0){
                 Toasty.info(getApplicationContext(),"There is no record !",Toasty.LENGTH_SHORT).show();
             }else
-            showDeleteAllDialog();
+                showDeleteAllDialog();
         }
         return super.onOptionsItemSelected(item);
     }
 
+
     private void showDeleteAllDialog() {
-        new AlertDialog.Builder(ListActivity.this).setTitle("Delete All History?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+        new AlertDialog.Builder(ListMvpActivity.this).setTitle("Delete All History?").setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 clearData();

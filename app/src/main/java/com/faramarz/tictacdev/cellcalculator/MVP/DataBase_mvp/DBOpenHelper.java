@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.MVP;
+package com.faramarz.tictacdev.cellcalculator.MVP.DataBase_mvp;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
@@ -7,7 +7,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DBOpenHelper extends SQLiteOpenHelper {
 
     public static final String DB_NAME = "history.db";
-    private static final int DB_VERSION = 2;
+    private static final int DB_VERSION = 3;
     public static final String TABLE_HISTORY = "history";
     public static final String HISTORY_ID = "id";
     public static final String HISTORY_DOUBLING_TIME = "doublingtime";

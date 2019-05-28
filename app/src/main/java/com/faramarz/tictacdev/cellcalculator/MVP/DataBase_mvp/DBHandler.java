@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.DataBase;
+package com.faramarz.tictacdev.cellcalculator.MVP.DataBase_mvp;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel;
+import com.faramarz.tictacdev.cellcalculator.Normal.HistoryModel;
 
 import java.util.ArrayList;
 import java.util.List;

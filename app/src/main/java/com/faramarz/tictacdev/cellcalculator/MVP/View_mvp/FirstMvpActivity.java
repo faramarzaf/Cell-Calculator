@@ -1,36 +1,35 @@
-package com.faramarz.tictacdev.cellcalculator;
+package com.faramarz.tictacdev.cellcalculator.MVP.View_mvp;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Handler;
-
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.Toast;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.faramarz.tictacdev.cellcalculator.R;
 
+public class FirstMvpActivity extends AppCompatActivity implements View.OnClickListener {
 
-public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
     Boolean backpressed = false;
     Button btn_ic50, btn_anova, btn_doublingTime;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first);
+        setContentView(R.layout.activity_first_mvp);
         bind();
 
         btn_ic50.setOnClickListener(this);
         btn_anova.setOnClickListener(this);
         btn_doublingTime.setOnClickListener(this);
 
-
     }
+
 
     void bind() {
         btn_ic50 = findViewById(R.id.btn_ic50);
@@ -40,6 +39,7 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_about, menu);
@@ -48,8 +48,8 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-      if (item.getItemId() == R.id.aboutus) {
-            startActivity(new Intent(FirstActivity.this, AboutUsActivity.class));
+        if (item.getItemId() == R.id.aboutus) {
+            startActivity(new Intent(FirstMvpActivity.this, AboutUsMvpActivity.class));
         }
         return super.onOptionsItemSelected(item);
     }
@@ -57,11 +57,11 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (v.getId() == btn_ic50.getId()) {
-            startActivity(new Intent(this, Ic50Activity.class));
+            startActivity(new Intent(this, Ic50MvpActivity.class));
         } else if (v.getId() == btn_anova.getId()) {
-            startActivity(new Intent(this, AnovaActivity.class));
+            startActivity(new Intent(this, AnovaMvpActivity.class));
         } else if (v.getId() == btn_doublingTime.getId()) {
-            startActivity(new Intent(this, MainActivity.class));
+            startActivity(new Intent(this, MainMvpActivity.class));
         }
     }
 
@@ -79,5 +79,6 @@ public class FirstActivity extends AppCompatActivity implements View.OnClickList
             }
         }, 2000);
     }
+
 
 }

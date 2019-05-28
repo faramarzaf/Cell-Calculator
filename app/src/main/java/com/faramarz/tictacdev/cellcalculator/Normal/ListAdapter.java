@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.Utils;
+package com.faramarz.tictacdev.cellcalculator.Normal;
 
 import android.content.Context;
 import android.view.LayoutInflater;

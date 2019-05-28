@@ -13,13 +13,13 @@
         tools:ignore="GoogleAppIndexingWarning">
 
 
-        <activity android:name=".MVP.Ic50MvpActivity"
+        <activity android:name=".MVP.View_mvp.Ic50MvpActivity"
             android:label="IC50 Calculator"
             android:screenOrientation="portrait"
             />
 
 
-        <activity android:name=".MVP.FirstMvpActivity"
+        <activity android:name=".MVP.View_mvp.FirstMvpActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
            >
@@ -32,45 +32,45 @@
 
         </activity>
 
-        <activity android:name=".MVP.AnovaMvpActivity"
+        <activity android:name=".MVP.View_mvp.AnovaMvpActivity"
             android:label="ANOVA Calculator"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".MVP.ListMvpActivity"
+        <activity android:name=".MVP.View_mvp.ListMvpActivity"
             android:label="Cells History"
             android:screenOrientation="portrait"
             />
 
-        <activity android:name=".MVP.AboutUsMvpActivity"
+        <activity android:name=".MVP.View_mvp.AboutUsMvpActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AboutusTheme"
             />
 
-        <activity android:name=".MVP.MainMvpActivity"
+        <activity android:name=".MVP.View_mvp.MainMvpActivity"
             android:label="Doubling Time Calculator"
             android:screenOrientation="portrait"
             />
 
 
         <activity
-            android:name=".AboutUsActivity"
+            android:name=".Normal.AboutUsActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AboutusTheme" />
         <activity
-            android:name=".ListActivity"
+            android:name=".Normal.ListActivity"
             android:label="Cells History"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Ic50Activity"
+            android:name=".Normal.Ic50Activity"
             android:label="IC50 Calculator"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".AnovaActivity"
+            android:name=".Normal.AnovaActivity"
             android:label="ANOVA Calculator"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".FirstActivity"
+            android:name=".Normal.FirstActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait">
 
@@ -79,7 +79,7 @@
         </activity>
 
         <activity
-            android:name=".MainActivity"
+            android:name=".Normal.MainActivity"
             android:label="Doubling Time Calculator"
             android:screenOrientation="portrait" />
     </application>

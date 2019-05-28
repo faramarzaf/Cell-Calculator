@@ -1,4 +1,7 @@
-package com.faramarz.tictacdev.cellcalculator.MVP;
+package com.faramarz.tictacdev.cellcalculator.MVP.Presenter_mvp;
+
+import com.faramarz.tictacdev.cellcalculator.MVP.Contract;
+import com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.Model;
 
 public class Presenter implements Contract.Presenter {
 

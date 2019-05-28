@@ -1,4 +1,6 @@
-package com.faramarz.tictacdev.cellcalculator.MVP;
+package com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp;
+
+import com.faramarz.tictacdev.cellcalculator.MVP.Contract;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

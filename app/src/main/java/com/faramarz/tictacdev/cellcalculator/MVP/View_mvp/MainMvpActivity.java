@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.MVP;
+package com.faramarz.tictacdev.cellcalculator.MVP.View_mvp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -11,12 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.faramarz.tictacdev.cellcalculator.DataBase.DBHandler;
-import com.faramarz.tictacdev.cellcalculator.DoublingComputerTime;
-import com.faramarz.tictacdev.cellcalculator.ListActivity;
-import com.faramarz.tictacdev.cellcalculator.MainActivity;
+import com.faramarz.tictacdev.cellcalculator.Normal.DBHandler;
+import com.faramarz.tictacdev.cellcalculator.MVP.Contract;
+import com.faramarz.tictacdev.cellcalculator.MVP.Presenter_mvp.Presenter;
 import com.faramarz.tictacdev.cellcalculator.R;
-import com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel;
+import com.faramarz.tictacdev.cellcalculator.Normal.HistoryModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -138,7 +137,7 @@ public class MainMvpActivity extends AppCompatActivity implements Contract.View,
 
                             Toasty.success(MainMvpActivity.this, "Saved!", Toast.LENGTH_SHORT, true).show();
                             dbHandler.open();
-                            com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel historyModel = new HistoryModel();
+                            HistoryModel historyModel = new HistoryModel();
                             historyModel.setDescription((txt_cell_description.getText().toString()));
                             historyModel.setTitle((txt_cell_title.getText()).toString());
                             historyModel.setDoublingtime("DT : " + myresult.getText().toString());

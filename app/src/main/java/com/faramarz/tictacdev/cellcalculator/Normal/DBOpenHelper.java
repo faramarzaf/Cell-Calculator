@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator.DataBase;
+package com.faramarz.tictacdev.cellcalculator.Normal;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

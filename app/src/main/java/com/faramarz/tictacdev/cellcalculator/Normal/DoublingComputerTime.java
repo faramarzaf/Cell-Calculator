@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator;
+package com.faramarz.tictacdev.cellcalculator.Normal;
 
 public class DoublingComputerTime {
     public double initialConcentration, finalConcentration, duration;

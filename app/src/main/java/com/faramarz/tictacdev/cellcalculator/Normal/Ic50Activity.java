@@ -1,4 +1,4 @@
-package com.faramarz.tictacdev.cellcalculator;
+package com.faramarz.tictacdev.cellcalculator.Normal;
 
 
 import android.os.Bundle;
@@ -6,15 +6,17 @@ import android.view.MenuItem;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-public class AnovaActivity extends AppCompatActivity {
+import com.faramarz.tictacdev.cellcalculator.R;
+
+public class Ic50Activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_anova);
+        setContentView(R.layout.activity_ic50);
         setBackBtn();
-
     }
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -29,4 +31,5 @@ public class AnovaActivity extends AppCompatActivity {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
     }
+
 }

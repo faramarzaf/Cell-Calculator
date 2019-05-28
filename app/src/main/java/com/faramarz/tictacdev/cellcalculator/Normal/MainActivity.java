@@ -1,26 +1,21 @@
-package com.faramarz.tictacdev.cellcalculator;
+package com.faramarz.tictacdev.cellcalculator.Normal;
 
 import android.content.Intent;
-import android.os.Handler;
 
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.faramarz.tictacdev.cellcalculator.DataBase.DBHandler;
-import com.faramarz.tictacdev.cellcalculator.Utils.HistoryModel;
+import com.faramarz.tictacdev.cellcalculator.R;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Locale;
 
 import es.dmoral.toasty.Toasty;
 import studio.carbonylgroup.textfieldboxes.ExtendedEditText;
