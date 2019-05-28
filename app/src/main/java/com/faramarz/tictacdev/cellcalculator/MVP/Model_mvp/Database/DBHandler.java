@@ -6,7 +6,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import com.faramarz.tictacdev.cellcalculator.Normal.HistoryModel;
+
+import com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -38,13 +39,13 @@ public class DBHandler {
     }
 
 
-    public List<HistoryModel> getAllDiary() {
-        List<HistoryModel> historyModels = new ArrayList<>();
+    public List<com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel> getAllDiary() {
+        List<com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel> historyModels = new ArrayList<>();
 //        diaryColumns[0] + " DESC"
         Cursor cursor = database.query(DBOpenHelper.TABLE_HISTORY, historyColumns, null, null, null, null, historyColumns[0] + " DESC");
         if (cursor.moveToFirst()) {
             do {
-                HistoryModel historyModel = new HistoryModel();
+                com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel historyModel = new com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel();
                 historyModel.setId(cursor.getInt(cursor.getColumnIndex(DBOpenHelper.HISTORY_ID)));
                 historyModel.setDescription(cursor.getString(cursor.getColumnIndex(DBOpenHelper.HISTORY_DESCRIPTION)));
                 historyModel.setDate(cursor.getString(cursor.getColumnIndex(DBOpenHelper.HISTORY_DATE)));

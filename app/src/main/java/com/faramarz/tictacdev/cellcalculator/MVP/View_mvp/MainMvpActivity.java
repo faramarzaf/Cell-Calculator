@@ -11,11 +11,11 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.faramarz.tictacdev.cellcalculator.Normal.DBHandler;
 import com.faramarz.tictacdev.cellcalculator.MVP.Contract;
+import com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.Database.DBHandler;
+import com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel;
 import com.faramarz.tictacdev.cellcalculator.MVP.Presenter_mvp.Presenter;
 import com.faramarz.tictacdev.cellcalculator.R;
-import com.faramarz.tictacdev.cellcalculator.Normal.HistoryModel;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

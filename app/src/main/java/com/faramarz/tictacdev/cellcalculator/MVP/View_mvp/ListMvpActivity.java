@@ -11,10 +11,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 
-import com.faramarz.tictacdev.cellcalculator.Normal.DBHandler;
+
+import com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.HistoryModel;
+import com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.ListAdapter;
 import com.faramarz.tictacdev.cellcalculator.R;
-import com.faramarz.tictacdev.cellcalculator.Normal.HistoryModel;
-import com.faramarz.tictacdev.cellcalculator.Normal.ListAdapter;
+
 
 import java.util.List;
 
@@ -23,7 +24,7 @@ import es.dmoral.toasty.Toasty;
 public class ListMvpActivity extends AppCompatActivity {
 
     ListView listview;
-    DBHandler dbHandler;
+    com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.Database.DBHandler dbHandler;
     ListAdapter adapter;
 
     @Override
@@ -32,7 +33,7 @@ public class ListMvpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_list_mvp);
 
         listview = findViewById(R.id.list);
-        dbHandler = new DBHandler(this);
+        dbHandler = new com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.Database.DBHandler(this);
         generateList();
         setBackBtn();
 
@@ -107,7 +108,7 @@ public class ListMvpActivity extends AppCompatActivity {
     }
 
     void clearData() {
-        DBHandler dbHandler = new DBHandler(getApplicationContext());
+        com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.Database.DBHandler dbHandler = new com.faramarz.tictacdev.cellcalculator.MVP.Model_mvp.Database.DBHandler(getApplicationContext());
         dbHandler.deleteAll();
     }
 
